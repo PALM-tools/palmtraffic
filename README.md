@@ -9,4 +9,4 @@ To install them into your database, download files ep_create_grid.sql and ep_int
 from FUME subdirectory "server" and run them (e.g. in Query Tool in PgAdmin).
 
 This script is not supposed to be run as it is but it is provided as a template which can be easily addapted
-for user indifidual input data.
+for user individual input data.
