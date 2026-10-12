@@ -1,26 +1,28 @@
 PIDS_TRAFFIC
 
-dimensions:
-time         : number of timesteps
-s            : number of the grid cells with transportation
-car_type     : number of car types
-field_length : length of the text fields timestamp, car_type
+Description of the structure of the PALM Traffic driver version 1.0.
 
-variables:
-timestamp(time, field_length)    : timestamp (format the same as PALM VSR emission)
-car_type(car_type, field_length) : car type description
-car_cd(car_type)                 : car drag coefficient (unitless)
-car_length(car_type)             : car length (m)
-car_width(car_type)              : car width (m)
-car_height(car_type)             : car height (m)
-i(s)                             : i coordinate of the grid cell
-j(s)                             : j coordinate of the grid cell
-k(s)                             : k coordinate of the grid cell
-width(s)                         : width of the street (m)
-slope(s)                         : slope of the street in car direction (%)
-dirx(s)                          : car movement direction (x unit coordinate)
-diry(s)                          : car movement direction (y unit coordinate)
-frac(s)                          : time profile coefficient
-intensity(time, s, car_type)     : transportation intensity (cars per hour)
-heat(time, s, car_type)          : heat produced by car (W per car)
-speed(time, s, car_type)         : speed of the car (m/s)
+Dimensions:
+time         : Number of timesteps.
+s            : Number of the grid cells with transportation.
+car_type     : Number of car types.
+field_length : Length of the text fields timestamp, car_type.
+
+Variables:
+timestamp(time, field_length)    : Timestamp (format the same as PALM VSR emission).
+car_type(car_type, field_length) : Car type description.
+car_cd(car_type)                 : Car drag coefficient (unitless).
+car_length(car_type)             : Car length (m).
+car_width(car_type)              : Car width (m).
+car_height(car_type)             : Car height (m).
+i(s)                             : i coordinate of the grid cell.
+j(s)                             : j coordinate of the grid cell.
+k(s)                             : k coordinate of the grid cell.
+width(s)                         : Width of the street (m).
+slope(s)                         : Slope of the street in car direction (%).
+dirx(s)                          : Car movement direction (x unit coordinate).
+diry(s)                          : Car movement direction (y unit coordinate).
+frac(s)                          : Fraction of the grid cell in the car stream (unitless).
+intensity(time, s, car_type)     : Transportation intensity (cars per hour).
+heat(time, s, car_type)          : Heat produced by car (W per car).
+speed(time, s, car_type)         : Speed of the car (m/s).

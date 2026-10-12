@@ -1,0 +1,27 @@
+PIDS_TRAFFIC v.2.0
+
+Description of the structure of the PALM Traffic driver version 2.0.
+
+Dimensions:
+time         : Number of timesteps.
+car_type     : Number of car types.
+car_stream   : Number of traffic streams.
+field_length : Length of the text fields timestamp, car_type.
+
+variables:
+timestamp(time, field_length)                 : Timestamp (format %Y-%m-%d %H:%M:%S %z).
+car_type(car_type, field_length)              : Car type description.
+car_cd(car_type)                              : Car drag coefficient (unitless).
+car_length(car_type)                          : Car length (m).
+car_width(car_type)                           : Car width (m).
+car_height(car_type)                          : Car height (m).
+stream_x1(car_stream)                         : X coordinate of stream start point (UTM).
+stream_y1(car_stream)                         : Y coordinate of stream start point (UTM).
+stream_x2(car_stream)                         : X coordinate of stream end point (UTM).
+stream_y2(car_stream)                         : Y coordinate of stream end point (UTM).
+stream_slope(car_stream)                      : Slope of the traffic stream (%) (optional).
+stream_intensity(time, car_stream, car_type)  : Traffic intensity (cars per hour).
+stream_heat(time, car_stream, car_type)       : Heat produced by car (W per car).
+stream_speed(time, car_stream, car_type)      : Speed of the car stream (m/s).
+stream_speedstd(time, car_stream, car_type)   : Standard deviation of speed of the car stream (m/s) (optional).
+
